@@ -1,3 +1,10 @@
+% This is a slightly adapted version of the
+% template created by Pol Mesalles Ripoll, which
+% is licensed under a Creative Commons CC BY 4.0
+% license.
+% Please visit https://www.overleaf.com/latex/templates/unofficial-cu-boulder-aerospace-beamer-template/wtjhtwdnshsn
+% to obtain the original copy of the template.
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cubeamer}[CU Boulder Beamer Presentation Template by @polmes]
 \LoadClass[aspectratio = 169]{beamer}
