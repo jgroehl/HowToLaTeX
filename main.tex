@@ -56,30 +56,6 @@ Style:\\
 
 \end{frame}
 
-\section{When might it be wise to use it?}
-
-\subsection{Large documents}
-
-\subsection{Math notation}
-
-\subsection{Bibliography management}
-
-\subsection{Extensibility}
-
-\section{Why doesn't everyone use it??}
-
-\subsection{Learning Curve}
-
-\subsection{Counterintuitivity}
-
-\subsection{Setting it up on a local computer}
-
-\section{A practical guide to \LaTeX}
-
-\subsection{Overleaf}
-
-\subsection{Some handy commands}
-
 \begin{frame}[fragile]{Document Structure Commands}
     \begin{tabular}{lll}
          \textbf{Command} &	\textbf{Level} &	\textbf{Comment}\\
@@ -112,62 +88,114 @@ Style:\\
     \end{tabular}
 \end{frame}
 
+\section{Why use \LaTeX?}
 
-% \begin{frame}{Frame Title}
-%     \begin{itemize}
-%         \item Use
-%         \item Figures,
-%         \item Do
-%         \item Not
-%         \item Use
-%         \item Bullet
-%         \item Points
-%     \end{itemize}
-% \end{frame}
+\begin{frame}{Situations where I used \LaTeX \space in the past}
+\begin{itemize}
+    \item Creating a book for my Analysis I \& II tutoring students
+    \item My bachelors thesis
+    \item My masters thesis
+    \item My PhD thesis
+    \item Any (internal) literature reviews
+    \item All of my papers (I think)
+\end{itemize}
+\end{frame}
 
-% \begin{frame}{Use meaningful titles that actually provide information}
-%     \begin{columns}
-%         \begin{column}{0.6\textwidth}
-%             \begin{figure}
-%                 \centering
-%                 \includegraphics[height = 0.7\textheight]{img/example.pdf}
-%                 \caption{Fancy Thing from \textit{Source et al.}}
-%             \end{figure}
-%         \end{column}
-%         \begin{column}{0.4\textwidth}
-%             \begin{itemize}
-%                 \item Some
-%                 \item Interesting
-%                 \item Points
-%             \end{itemize}
-%         \end{column}
-%     \end{columns}
-% \end{frame}
+\subsection{Large documents}
 
-% \section{A Section}
+\begin{frame}{Word and other WYSIWYG editors seem to struggle with large files..}
+\begin{itemize}
+    \item Lagging and slow behaviour when scrolling and editing
+    \item Errors in PDF exporting
+    \item Rendering errors for figures
+    \item Formatting issues arising somewhere in the document when editing somewhere else
+    \item Corruption of files when saving / opening
+\end{itemize}
+\end{frame}
 
-% \begin{frame}{Make your presentation interactive}
-%     \begin{cublock}[What about a question to the audience?]
-%         \begin{overlayarea}{\textwidth}{\baselineskip}
-%             \only<2->{Followed by the answer.}
-%         \end{overlayarea}
-%     \end{cublock}
-% \end{frame}
+\begin{frame}{Why is \LaTeX\space any better?}
+\begin{itemize}
+    \item The content is editable independently of the formatting
+    \item Very small computational requirements during editing
+    \item Possibility to easily sub-divide chapter into different files
+    \item Even year-old documents (both the PDFs and the \LaTeX\space files) are readable
+    \item Not reliant on the "mood" of any particular vendor
+\end{itemize}
+\end{frame}
 
-% % Q&A
-% \begin{frame}
-%     \Huge\textsc{Thank You}
+\subsection{Math notation}
+
+\begin{frame}{Math notation with \LaTeX}
+    \begin{itemize}
+        \item Super powerful script-based notation
+        \item Started by enclosing a statement in dollar signs (\$ MATH \$)
+        \item Pre-defined Greek and Hebrew letters ($\alpha, \beta, \gamma, ...$)
+        \item Math constructs (fractions, integrals, sums, ...)
+        \item Delimiter symbols, standard function names, operator symbols, ...
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Some examples}
+    \begin{tabular}{cc}
+    TeX command & Rendering \\
+    \hline
+    \\
+      \tiny{\verb!\int\limits_0^\infty\dfrac{e^x}{1+2e^x+e^{2x}}dx!}   & $ \int\limits_0^\infty \dfrac{e^x}{1+2e^x+e^{2x}} dx$  \\
+    \\
+    \tiny{\verb!\sum\limits_{-\infty}^{\infty} \dfrac{1}{2} a_k - ib_k)!} & 
+    $ \sum\limits_{-\infty}^{\infty} \dfrac{1}{2} (a_k - ib_k) $ \\
+    \\
+    \tiny{\verb!f(x_1, y_1)=\left(\begin{matrix} x_1\\ y_1 \end{matrix}\right)!} &
+    $f(x_1, y_1)=\left(\begin{matrix} x_1\\ y_1 \end{matrix}\right)$\\
+    \end{tabular}
+\end{frame}
+
+\subsection{Bibliography management}
+
+\begin{frame}{BibTeX}
+    \begin{itemize}
+        \item BibTeX is a tool and a file format used to describe and process references
+        \item References are kept in a .bib file
+        \item References can then be used throughout a \LaTeX\space document
+        \item Complete control of the way references are used in the text and how the bibliography is formatted
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{.bib File content example}
+\hspace{0.2\textwidth}
+\begin{minipage}{0.6\textwidth}
+\includegraphics[width=\textwidth]{img/bib file content.png}
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Citing in the text}
+
+\begin{itemize}
+    \item \textbackslash cite\{knuth1984texbook\} \cite{knuth1984texbook}
+    \item \textbackslash cite[p.42]\{knuth1984texbook\} \cite[p.42]{knuth1984texbook}
+\end{itemize}
     
-%     \vfill
-    
-%     \LARGE\textsc{Questions?}
-% \end{frame}
+\end{frame}
 
-% \appendix
+\section{What are the problems with \LaTeX?}
 
-% \begin{frame}{Backup slides go here}
+\begin{frame}{The one \LaTeX to rule them all?}
+\hspace{0.25\textwidth}
+\begin{minipage}{0.5\textwidth}
+\includegraphics[width=\textwidth]{img/meme.jpg}
+\end{minipage}
     
-% \end{frame}
+\end{frame}
+
+\begin{frame}{Drawbacks}
+    \begin{itemize}
+        \item Learning Curve
+        \item Counterintuitivity
+        \item Setting it up on a local computer
+    \end{itemize}
+\end{frame}
+
+\section{A practical guide to \LaTeX}
 
 \begin{frame}{Bibliography}
 \bibliographystyle{apalike}
